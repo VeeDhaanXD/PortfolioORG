@@ -19,6 +19,18 @@ export default function Navbar() {
     );
   }, []);
 
+const handleScroll = (e, id) => {
+  e.preventDefault();
+  const section = document.getElementById(id);
+  console.log("Scrolling to:", id, section);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  } else {
+    console.warn(`No section found with id: ${id}`);
+  }
+};
+
+
   return (
     <nav className="navbar fixed top-0 w-full bg-transparent text-white py-4 px-8 z-50 flex justify-between items-center">
       <div
@@ -32,16 +44,33 @@ export default function Navbar() {
         />
       </div>
       <div className="flex gap-6">
-        <a href="#about" className="hover:text-green-400 transition-colors duration-300">
-         Skills
+        <a
+          href="#skills"
+          onClick={(e) => handleScroll(e, "skills")}
+          className="hover:text-cyan-400 transition-colors duration-300 cursor-pointer"
+        >
+          Skills
         </a>
-        <a href="#skills" className="hover:text-green-400 transition-colors duration-300">
-          Projects        </a>
-        <a href="#projects" className="hover:text-green-400 transition-colors duration-300">
+        <a
+          href="#projects"
+          onClick={(e) => handleScroll(e, "projects")}
+          className="hover:text-cyan-400 transition-colors duration-300 cursor-pointer"
+        >
+          Projects
+        </a>
+        <a
+          href="#certifications"
+          onClick={(e) => handleScroll(e, "certifications")}
+          className="hover:text-cyan-400 transition-colors duration-300 cursor-pointer"
+        >
           Certifications
         </a>
-        <a href="#contact" className="hover:text-green-400 transition-colors duration-300">
-          Contact Me !
+        <a
+          href="#more"
+          onClick={(e) => handleScroll(e, "more")}
+          className="hover:text-cyan-400 transition-colors duration-300 cursor-pointer"
+        >
+          Contact Me!
         </a>
       </div>
     </nav>

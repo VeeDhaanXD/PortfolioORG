@@ -110,6 +110,7 @@ const Projects = () => {
     <section
       className="projects-section bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-32 px-6"
       style={{ minHeight: "700px" }}
+      id="projects"
     >
       <h2 className="text-4xl font-bold text-center mb-20 text-cyan-400 drop-shadow-[0_0_30px_rgba(0,246,255,1)]">
         PROJECTS

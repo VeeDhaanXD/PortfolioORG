@@ -93,6 +93,7 @@ const Skills = () => {
     <section
       className="skills-section relative bg-black text-white py-32 overflow-visible"
       style={{ minHeight: "700px" }}
+      id="skills"
     >
       {/* VHS Scanline Overlay */}
       <div className="absolute inset-0 z-9 pointer-events-none scanline-overlay" />

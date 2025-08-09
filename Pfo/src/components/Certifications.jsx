@@ -20,7 +20,8 @@ const certifications = [
 
 export default function Certifications() {
   return (
-    <section className="bg-black py-16 px-6 text-white">
+    <section id="certifications" className="bg-black py-16 px-6 text-white">
+
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
